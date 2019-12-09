@@ -1,0 +1,47 @@
+    <% if flash[:notice] %>
+        <div class="alert alert-success" role="alert">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
+
+    <table class="table table-bordered table-hover">
+        <thead> 
+            <tr>
+                <td>Rótulo</td>
+                <td>País</td>
+                <td>Departamento</td>
+                <td>Uva</td>
+                <td>Preço</td>
+                <td>Nota</td>
+                <td>Observação</td>
+                <td colspan="2">
+            </tr>
+        </thead> 
+        <tbody>        
+            <%= render @produtos %>
+        </tbody>
+    </table>
+
+    <div class="alert alert-success" role="alert"
+        <h3 class="alert-heading"> Produto com menor preco </h3>
+    </div> 
+
+    <table class="table table-bordered table-hover">
+        <thead> 
+            <tr>
+                <td>Rótulo</td>
+                <td>País</td>
+                <td>Departamento</td>
+                <td>Uva</td>
+                <td>Preço</td>
+                <td>Nota</td>
+                <td>Observação</td>
+                <td colspan="2">
+            </tr>
+        </thead>
+
+        <tbody> 
+        <%= render @produto_com_melhor_preco %>         
+        </tbody>
+
+    </table>
